@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     PIXI.utils.sayHello();
 
-    var folder = "/images/thefloatinghourglass/";
+    var folder = "https://zakespley.github.io/Hyperfine/images/thefloatinghourglass/";
 
     let type = "WebGL"
     if (!PIXI.utils.isWebGLSupported()) {
@@ -365,7 +365,7 @@ class Can extends PIXI.Container {
 
         this.sand = new PIXI.Graphics();
         this.border = new PIXI.Graphics();
-        this.name = new PIXI.Sprite.fromImage("/images/thefloatinghourglass/" + name + ".png");
+        this.name = new PIXI.Sprite.fromImage("https://zakespley.github.io/Hyperfine/images/thefloatinghourglass/" + name + ".png");
         this.origin = new PIXI.Graphics();
         this.x = x - width/2;
         this.y = y - height/2;
