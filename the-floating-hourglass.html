@@ -149,7 +149,7 @@ Since the basic unit of mass in this system is the mass volume of water displace
 </p>
 <p>\eqref{eq:mass} can be accounted for by combining \eqref{eq:kmass}, \eqref{eq:kmassSum}, \eqref{eq:mt} and \eqref{eq:mb}.</p>
 <h3>Intuition</h3>
-<h5>When do objects float?</h5>
+<h4>When do objects float?</h4>
 <p>To start we look at any submerged object (not just the cans, but for any object). If gravity and the buoyant forces are the only two forces acting on the object, and it is neutrally buoyant (that is that it neither wants to sink nor float), then we know the following:</p>
 <p>
 <script type="math/tex; mode=display">\begin{align}
@@ -183,10 +183,10 @@ Since the basic unit of mass in this system is the mass volume of water displace
 </script>
 For us, this means that one of our cans will float when it has equal to <script type="math/tex">m_w</script>. This happens for either individual can when it is full and <script type="math/tex">\kappa=1</script>.</p>
 <p>Let's look at <script type="math/tex">m_w</script> from another, more intuitive, light. <script type="math/tex">m_w</script> is the mass of water displaced by the the can. It can also be thought of as the mass of the can if it were full of water. This is how we will refer to <script type="math/tex">m_w</script> here on out.</p>
-<h5>What is <script type="math/tex">\kappa</script>?</h5>
+<h4>What is <script type="math/tex">\kappa</script>?</h4>
 <p>
 <script type="math/tex">\kappa</script> is more specific to our model. It is a scaling that lets us represent the total mass of the system as some amount of cans full of water. i.e. if <script type="math/tex">\kappa=\frac{1}{2}</script> then the total mass is equal to half of the mass of one of the cans filled with water. If <script type="math/tex">\kappa= \pi</script> then the total mass is equal to <script type="math/tex">\pi</script> cans full of water. Using this and our floating conditions should help us get a good footing on what will happen to our system with certain bounds for <script type="math/tex">\kappa</script>.</p>
-<h5>Floating and sinking in our model.</h5>
+<h4>Floating and sinking in our model.</h4>
 <p>Now that we have some idea of what <script type="math/tex">\kappa</script> represents, let's now look at different distributions of mass (different <script type="math/tex">\lambda</script> values), for different total masses (different <script type="math/tex">\kappa</script> values). We can think about what happens as mass moves form the right can to the left, <script type="math/tex">\lambda:1\rightarrow0</script>.</p>
 <p>If <script type="math/tex">\kappa < 1</script>, then <script type="math/tex">M < m_w</script> by \eqref{eq:kmass}. If we compare that to our floating conditions, \eqref{eq:buoycond} we see the system should float.  This means that no matter what <script type="math/tex">\lambda</script> is, our system can never sink. Even if all if the mass is in one can or the other, <script type="math/tex">\lambda=1</script> or  <script type="math/tex">\lambda=0</script>, the full can will still be lighter than a can full of water. However we distribute the mass, both cans will float.</p>
 <p>When <script type="math/tex">\kappa=1</script> the system will have the same mass as one of the cans full of water. Then while <script type="math/tex">\lambda</script> varies between 1 and 0 mass will start in the right can move to the left. When <script type="math/tex">\lambda=1</script> we will meet our neutral buoyancy condition, \eqref{eq:buoycond1}, for the right can. The left will then went float. Once we move any amount of mass from the right can to the left, <script type="math/tex">0<\lambda<1</script>, both cans will want to float as each will now have a mass less than <script type="math/tex">m_w</script>.</p>

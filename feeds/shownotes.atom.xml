@@ -49,7 +49,7 @@ Since the basic unit of mass in this system is the mass volume of water displace
 &lt;/p&gt;
 &lt;p&gt;\eqref{eq:mass} can be accounted for by combining \eqref{eq:kmass}, \eqref{eq:kmassSum}, \eqref{eq:mt} and \eqref{eq:mb}.&lt;/p&gt;
 &lt;h3&gt;Intuition&lt;/h3&gt;
-&lt;h5&gt;When do objects float?&lt;/h5&gt;
+&lt;h4&gt;When do objects float?&lt;/h4&gt;
 &lt;p&gt;To start we look at any submerged object (not just the cans, but for any object). If gravity and the buoyant forces are the only two forces acting on the object, and it is neutrally buoyant (that is that it neither wants to sink nor float), then we know the following:&lt;/p&gt;
 &lt;p&gt;
 &lt;script type="math/tex; mode=display"&gt;\begin{align}
@@ -83,10 +83,10 @@ Since the basic unit of mass in this system is the mass volume of water displace
 &lt;/script&gt;
 For us, this means that one of our cans will float when it has equal to &lt;script type="math/tex"&gt;m_w&lt;/script&gt;. This happens for either individual can when it is full and &lt;script type="math/tex"&gt;\kappa=1&lt;/script&gt;.&lt;/p&gt;
 &lt;p&gt;Let's look at &lt;script type="math/tex"&gt;m_w&lt;/script&gt; from another, more intuitive, light. &lt;script type="math/tex"&gt;m_w&lt;/script&gt; is the mass of water displaced by the the can. It can also be thought of as the mass of the can if it were full of water. This is how we will refer to &lt;script type="math/tex"&gt;m_w&lt;/script&gt; here on out.&lt;/p&gt;
-&lt;h5&gt;What is &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;?&lt;/h5&gt;
+&lt;h4&gt;What is &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;?&lt;/h4&gt;
 &lt;p&gt;
 &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; is more specific to our model. It is a scaling that lets us represent the total mass of the system as some amount of cans full of water. i.e. if &lt;script type="math/tex"&gt;\kappa=\frac{1}{2}&lt;/script&gt; then the total mass is equal to half of the mass of one of the cans filled with water. If &lt;script type="math/tex"&gt;\kappa= \pi&lt;/script&gt; then the total mass is equal to &lt;script type="math/tex"&gt;\pi&lt;/script&gt; cans full of water. Using this and our floating conditions should help us get a good footing on what will happen to our system with certain bounds for &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;.&lt;/p&gt;
-&lt;h5&gt;Floating and sinking in our model.&lt;/h5&gt;
+&lt;h4&gt;Floating and sinking in our model.&lt;/h4&gt;
 &lt;p&gt;Now that we have some idea of what &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; represents, let's now look at different distributions of mass (different &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; values), for different total masses (different &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; values). We can think about what happens as mass moves form the right can to the left, &lt;script type="math/tex"&gt;\lambda:1\rightarrow0&lt;/script&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;script type="math/tex"&gt;\kappa &lt; 1&lt;/script&gt;, then &lt;script type="math/tex"&gt;M &lt; m_w&lt;/script&gt; by \eqref{eq:kmass}. If we compare that to our floating conditions, \eqref{eq:buoycond} we see the system should float.  This means that no matter what &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; is, our system can never sink. Even if all if the mass is in one can or the other, &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; or  &lt;script type="math/tex"&gt;\lambda=0&lt;/script&gt;, the full can will still be lighter than a can full of water. However we distribute the mass, both cans will float.&lt;/p&gt;
 &lt;p&gt;When &lt;script type="math/tex"&gt;\kappa=1&lt;/script&gt; the system will have the same mass as one of the cans full of water. Then while &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; varies between 1 and 0 mass will start in the right can move to the left. When &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; we will meet our neutral buoyancy condition, \eqref{eq:buoycond1}, for the right can. The left will then went float. Once we move any amount of mass from the right can to the left, &lt;script type="math/tex"&gt;0&lt;\lambda&lt;1&lt;/script&gt;, both cans will want to float as each will now have a mass less than &lt;script type="math/tex"&gt;m_w&lt;/script&gt;.&lt;/p&gt;
