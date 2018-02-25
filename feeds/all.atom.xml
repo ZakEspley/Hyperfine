@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hyperfine Podcast Blog</title><link href="https://zakespley.github.io/Hyperfine/" rel="alternate"></link><link href="https://zakespley.github.io/Hyperfine/feeds/all.atom.xml" rel="self"></link><id>https://zakespley.github.io/Hyperfine/</id><updated>2018-02-02T10:00:00-08:00</updated><entry><title>The Floating Hourglass</title><link href="https://zakespley.github.io/Hyperfine/the-floating-hourglass.html" rel="alternate"></link><published>2018-02-02T10:00:00-08:00</published><updated>2018-02-02T10:00:00-08:00</updated><author><name>Zak Espley</name></author><id>tag:zakespley.github.io,2018-02-02:/Hyperfine/the-floating-hourglass.html</id><summary type="html">&lt;p&gt;Hourglass Floating in Water&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hyperfine Podcast Blog</title><link href="https://zakespley.github.io/Hyperfine/" rel="alternate"></link><link href="https://zakespley.github.io/Hyperfine/feeds/all.atom.xml" rel="self"></link><id>https://zakespley.github.io/Hyperfine/</id><updated>2018-02-02T10:00:00-08:00</updated><entry><title>The Floating Hourglass</title><link href="https://zakespley.github.io/Hyperfine/the-floating-hourglass.html" rel="alternate"></link><published>2018-02-02T10:00:00-08:00</published><updated>2018-02-02T10:00:00-08:00</updated><author><name>Zak Espley</name></author><id>tag:zakespley.github.io,2018-02-02:/Hyperfine/the-floating-hourglass.html</id><summary type="html">&lt;p&gt;Hourglass Floating in Water&lt;/p&gt;</summary><content type="html">&lt;!-- https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js,
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css   --&gt;
+
+&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;We started by looking at the following animation:&lt;/p&gt;
 &lt;div align="center"&gt;
 &lt;img src="https://i.makeagif.com/media/7-29-2016/Clh8gl.gif"&gt;
@@ -107,4 +110,4 @@ For us, this means that one of our cans will float when it has equal to &lt;scri
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</content></entry></feed>
+&lt;/div&gt;</content><category term="classical mechanics"></category></entry></feed>
