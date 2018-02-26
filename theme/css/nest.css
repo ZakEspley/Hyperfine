@@ -221,8 +221,8 @@ h4:after {
     height: 360px;
 }
 .header-wrapper{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .header-content {
     text-align: center;
@@ -236,8 +236,16 @@ h4:after {
     margin-top: 0;
 }
 
+#logoimg {
+    width: 80px
+}
+
 @media only screen and (min-width: 750px) {
     .header-title {font-size: 150px}
+}
+
+@media only screen and (max-width: 330px) {
+    #logoimg {width: 20%}
 }
 
 .article-header-title {

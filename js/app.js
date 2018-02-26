@@ -35,6 +35,7 @@ $(document).ready(function(){
         // stageWidth =  window.innerWidth;
         // stageHeight = 512;
         app.renderer.resize(stageWidth, stageHeight);
+
         //Place Origin in Bottom Right
         app.stage.position.y = app.renderer.height;
         app.stage.scale.y = -1;
@@ -88,12 +89,15 @@ $(document).ready(function(){
             annotations: [{
                 x: lambda,
                 text: "Current Lambda",
-            }]
+            }],
+            width: stageWidth-40,
+            height: stageWidth-40
         });
 
     }
 
-    
+    // var lambdaSlide = $("#lamVal")
+    // var kappaSlide = $("#kapVal")
     var lamVal = $('#lamVal');
     var kapVal = $("#kapVal");
     var lambdaSlide = $("#lambda");
@@ -303,7 +307,8 @@ $(document).ready(function(){
             x: lambda,
             text: "Current Lambda",
         }],
-        width:500
+        width: stageWidth-40,
+        height: stageWidth-40
     });
 
     
