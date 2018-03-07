@@ -65,11 +65,11 @@ $(document).ready(function(){
             target: '#canchart',
             data: [
                 {
-                    fn: '(1/({0}*x)-1)'.format(kappa.toString())
+                    fn: '(1/({0})-x)'.format(kappa.toString())
                 }, {
-                    fn: '(1/((1-x)*{0})-1)'.format(kappa.toString())
+                    fn: '(1/({0})-(1-x))'.format(kappa.toString())
                 }, {
-                    fn: '1/({0}*x) + 1/((1-x){0}) -2'.format(kappa.toString())
+                    fn: '1/({0}) + 1/({0})-1'.format(kappa.toString())
                 }, {
                     x: 'x={0}'.format(lambda),
                     y: 'y=t',
@@ -281,12 +281,12 @@ $(document).ready(function(){
         target: '#canchart',
         data: [
             {
-                fn: '(1/({0}*x)-1)'.format(kappa.toString()),
+                fn: '(1/({0})-x)'.format(kappa.toString()),
                 text: "a_t"
             }, {
-                fn: '(1/((1-x)*{0})-1)'.format(kappa.toString())
+                fn: '(1/({0})-(1-x))'.format(kappa.toString())
             }, {
-                fn: '1/({0}*x) + 1/((1-x){0}) -2'.format(kappa.toString())
+                fn: '1/({0}) + 1/({0}) -1'.format(kappa.toString())
             }, {
                 x: 'x={0}'.format(lambda),
                 y: 'y=t',

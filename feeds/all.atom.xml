@@ -22,9 +22,10 @@ https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css   --&gt;
 &lt;p&gt;For a sanity check, Zak created a couple models of the system to see what would happen. In the podcast we ran into problems with our first simple model. Afterwards, Zak realized the problems and the rest is explained below.&lt;/p&gt;
 &lt;h2&gt;Two cans, side-by-side&lt;/h2&gt;
 &lt;h3&gt;Setup&lt;/h3&gt;
-&lt;p&gt;&lt;p align="center"&gt;
+&lt;p align="center"&gt;
 &lt;img src="images/thefloatinghourglass/Hourglass-CansStacked-Forces (2).png" width=500px&gt;
-&lt;/p&gt;&lt;/p&gt;
+&lt;/p&gt;
+
 &lt;p&gt;Zak started by considering two non-interacting cans submerged in water. The total mass of the system is &lt;script type="math/tex"&gt;M&lt;/script&gt; and is held constant. We can magically transfer mass between the cans, but we can't add or subtract from the total amount inside. The can on the right has mass &lt;script type="math/tex"&gt;m_T&lt;/script&gt; (T for top as we'll see later) and the can on the left mass &lt;script type="math/tex"&gt;m_B&lt;/script&gt; (B for bottom). &lt;script type="math/tex"&gt;M&lt;/script&gt; can be expressed as the sum of &lt;script type="math/tex"&gt;m_T&lt;/script&gt; and &lt;script type="math/tex"&gt;m_B&lt;/script&gt;. That is:&lt;/p&gt;
 &lt;p&gt;
 &lt;script type="math/tex; mode=display"&gt;\begin{align}
@@ -52,8 +53,21 @@ Since the basic unit of mass in this system is the mass volume of water displace
 &lt;/p&gt;
 &lt;p&gt;\eqref{eq:mass} can be accounted for by combining \eqref{eq:kmass}, \eqref{eq:kmassSum}, \eqref{eq:mt} and \eqref{eq:mb}.&lt;/p&gt;
 &lt;h3&gt;Expectation&lt;/h3&gt;
-&lt;p&gt;What are we trying to see with this model? What would tell us if this model describes the floating hourglass of not?&lt;/p&gt;
-&lt;p&gt;If there is some way that we can distribute the masses such that when we stack the cans, the forces the put on each other will cancel for a while. Then at some point, when &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; reaches a certain value, the net force (acceleration) is up. To be worked on....&lt;/p&gt;
+&lt;p&gt;What are we trying to see with this model? What would tell us if this model describes the floating hourglass in our GIF of not?&lt;/p&gt;
+&lt;p&gt;It's easy to imagine if the top half of the hour glass has most of the sand it would want to sink. The bottom would then have little sand and should float. Similarly, if the top half is empty it will want to float and pull up on the sinking bottom half. Could these two forces cancel for time, then at a particular &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; they add positively to make the two halves float.&lt;/p&gt;
+&lt;p&gt;For that cans we will focus on them separately but look at the sum of the net forces on the two. We need to see if there is a &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; value that would cause the right can (top half) to sink first while the left can (bottom half) rises. Any other situation won't suite our needs. For instance, if both cans float or both can sink, this won't allow forces between the cans to cancel.&lt;/p&gt;
+&lt;p&gt;Once we have &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; figured out, we want to see as sand flows from the left can to the right can, i.e. &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; goes from 1 to 0, if the sum of the forces on the cans will cancel for while. Then at some point, become greater than zero, causing the system to float.&lt;/p&gt;
+&lt;p&gt;So what would mean this model is accurate? If we could find a &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; that would do the following:&lt;/p&gt;
+&lt;p&gt;
+&lt;script type="math/tex; mode=display"&gt;
+    \left.
+    \begin{aligned}
+        \kappa &amp;: \text{The cans move in opposite directions}\\
+        \kappa &amp;: \text{The net force is zero for some } \lambda  \text{ and positive for others.}
+    \end{aligned} \tag{A} \label{eq:kappacond}
+    \right\}
+&lt;/script&gt;
+&lt;/p&gt;
 &lt;h3&gt;Intuition&lt;/h3&gt;
 &lt;h4&gt;When do objects float?&lt;/h4&gt;
 &lt;p&gt;To start we look at any submerged object (not just the cans, but for any object). If gravity and the buoyant forces are the only two forces acting on the object, and it is neutrally buoyant (that is that it neither wants to sink nor float), then we know the following:&lt;/p&gt;
@@ -84,7 +98,7 @@ Since the basic unit of mass in this system is the mass volume of water displace
         m = m_w &amp;\Rightarrow \text{Neutrally Buoyant} \\
         m &lt; m_w &amp;\Rightarrow \text{Object Floats} \\
         m &gt; m_w &amp;\Rightarrow \text{Object Sinks}
-    \end{aligned} \tag{10} \label{eq:buoycond}
+    \end{aligned} \tag{B} \label{eq:buoycond}
     \right\}
 &lt;/script&gt;
 For us, this means that one of our cans will float when it has equal to &lt;script type="math/tex"&gt;m_w&lt;/script&gt;. This happens for either individual can when it is full and &lt;script type="math/tex"&gt;\kappa=1&lt;/script&gt;.&lt;/p&gt;
@@ -94,11 +108,11 @@ For us, this means that one of our cans will float when it has equal to &lt;scri
 &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; is more specific to our model. It is a scaling that lets us represent the total mass of the system as some amount of cans full of water. i.e. if &lt;script type="math/tex"&gt;\kappa=\frac{1}{2}&lt;/script&gt; then the total mass is equal to half of the mass of one of the cans filled with water. Kappa can be any real positive number. If &lt;script type="math/tex"&gt;\kappa= \pi&lt;/script&gt; then the total mass is equal to &lt;script type="math/tex"&gt;\pi&lt;/script&gt; cans full of water. Using this and our floating conditions should help us get a good footing on what will happen to our system with certain bounds for &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;.&lt;/p&gt;
 &lt;h4&gt;Floating and sinking in our model.&lt;/h4&gt;
 &lt;p&gt;Now that we have some idea of what &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; represents, let's now look at different distributions of mass (different &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; values), for different total masses (different &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; values). We can think about what happens as mass moves form the right can to the left, &lt;script type="math/tex"&gt;\lambda:1\rightarrow0&lt;/script&gt;.&lt;/p&gt;
-&lt;p&gt;If &lt;script type="math/tex"&gt;\kappa &lt; 1&lt;/script&gt;, then &lt;script type="math/tex"&gt;M &lt; m_w&lt;/script&gt; by \eqref{eq:kmass}. If we compare that to our floating conditions, \eqref{eq:buoycond} we see the system should float.  This means that no matter what &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; is, our system can never sink. Even if all if the mass is in one can or the other, &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; or  &lt;script type="math/tex"&gt;\lambda=0&lt;/script&gt;, the full can will still be lighter than a can full of water. However we distribute the mass, both cans will float.&lt;/p&gt;
-&lt;p&gt;When &lt;script type="math/tex"&gt;\kappa=1&lt;/script&gt; the system will have the same mass as one of the cans full of water. Then while &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; varies between 1 and 0 mass will start in the right can move to the left. When &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; we will meet our neutral buoyancy condition, \eqref{eq:buoycond1}, for the right can. The left will then went float. Once we move any amount of mass from the right can to the left, &lt;script type="math/tex"&gt;0&lt;\lambda&lt;1&lt;/script&gt;, both cans will want to float as each will now have a mass less than &lt;script type="math/tex"&gt;m_w&lt;/script&gt;.&lt;/p&gt;
-&lt;p&gt;Now we consider &lt;script type="math/tex"&gt;1&lt;\kappa&lt;2&lt;/script&gt;. When all the mass starts in the right can, we will have &lt;script type="math/tex"&gt;m_T &gt; m_w&lt;/script&gt; and thus the can will want to sink. As &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; decreases and mass is transferred from the right to the left, we will find a point where &lt;script type="math/tex"&gt;m_T=m_w&lt;/script&gt;. At this point the right can will be neutrally buoyant and for all &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; less than this point, the right can will float.&lt;/p&gt;
+&lt;p&gt;If &lt;script type="math/tex"&gt;\kappa &lt; 1&lt;/script&gt;, then &lt;script type="math/tex"&gt;M &lt; m_w&lt;/script&gt; by \eqref{eq:kmass}. If we compare that to our floating conditions, \eqref{eq:buoycond} we see the system should float.  This means that no matter what &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; is, our system can never sink. Even if all if the mass is in one can or the other, &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; or  &lt;script type="math/tex"&gt;\lambda=0&lt;/script&gt;, the full can will still be lighter than a can full of water. However we distribute the mass, both cans will float. This doesn't meet the first half of \eqref{eq:kappacond}. This we must keep looking for a &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;When &lt;script type="math/tex"&gt;\kappa=1&lt;/script&gt; the system will have the same mass as one of the cans full of water. Then while &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; varies between 1 and 0 mass will start in the right can move to the left. When &lt;script type="math/tex"&gt;\lambda=1&lt;/script&gt; we will meet our neutral buoyancy condition, \eqref{eq:buoycond1}, for the right can. The left will then went float. Once we move any amount of mass from the right can to the left, &lt;script type="math/tex"&gt;0&lt;\lambda&lt;1&lt;/script&gt;, both cans will want to float as each will now have a mass less than &lt;script type="math/tex"&gt;m_w&lt;/script&gt;. This looks like it could meet both conditions of \eqref{eq:kappacond}. We at least meet the first half, but we will need to further investigate the second half. &lt;/p&gt;
+&lt;p&gt;Now we consider &lt;script type="math/tex"&gt;1&lt;\kappa&lt;2&lt;/script&gt;. When all the mass starts in the right can, we will have &lt;script type="math/tex"&gt;m_T &gt; m_w&lt;/script&gt; and thus the can will want to sink. As &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; decreases and mass is transferred from the right to the left, we will find a point where &lt;script type="math/tex"&gt;m_T=m_w&lt;/script&gt;. At this point the right can will be neutrally buoyant and for all &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; less than this point, the right can will float. This looks like it has potential to meet the requirements of \eqref{eq:kappacond}. We will look more into the second half below.&lt;/p&gt;
 &lt;p&gt;So far I have discussed what happens to the right can when &lt;script type="math/tex"&gt;\kappa &lt; 1&lt;/script&gt;, &lt;script type="math/tex"&gt;\kappa = 1&lt;/script&gt;, and &lt;script type="math/tex"&gt;1 &lt; \kappa &lt; 2&lt;/script&gt;. As an exercise for the reader, can you determine what will happen to the right can for &lt;script type="math/tex"&gt;\kappa = 2&lt;/script&gt; and &lt;script type="math/tex"&gt;\kappa &gt; 2&lt;/script&gt;. Are there any other special values of &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; we should care about? Additionally can you go back and determine what will happen with the left can as we very &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; (I've done some of the work for you)?&lt;/p&gt;
-&lt;p&gt;Below is an interactive simulation that can help you figure things out. Beneath it is a description of how you might use it to help answer the questions.&lt;/p&gt;
+&lt;p&gt;Below is an interactive simulation that can help you figure things out. Beneath it is a description of how you might use it to help answer the questions. See if you can find any values of &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; that meet \eqref{eq:kappacond}.&lt;/p&gt;
 &lt;h3&gt;Simulation&lt;/h3&gt;
 &lt;div id="display"&gt;&lt;/div&gt;
 
@@ -113,22 +127,40 @@ For us, this means that one of our cans will float when it has equal to &lt;scri
 
 &lt;div class="row"&gt;
     &lt;div class="col"&gt;
-        &lt;p&gt;$$a_T=\text{blue}$$&lt;/p&gt;
-        &lt;p&gt;$$a_B=\text{red}$$&lt;/p&gt;
-        &lt;p&gt;$$a_{total}=a_T+a_B=\text{green}$$&lt;/p&gt;
+        &lt;p&gt;$$F_T=\text{blue}$$&lt;/p&gt;
+        &lt;p&gt;$$F_B=\text{red}$$&lt;/p&gt;
+        &lt;p&gt;$$F_{total}=F_T+F_B=\text{green}$$&lt;/p&gt;
         &lt;p&gt;$$\text{Current } \lambda=\text{yellow}$$ &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h4&gt;Description&lt;/h4&gt;
-&lt;p&gt;Here is our setup. You have two cans submerged in water. The red arrow represents the buoyant force, the purple arrow is the force of gravity. &lt;/p&gt;
-&lt;p&gt;There are two sliders, one for &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; and the other for &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;. You can slide them to change the amount of sand that is in either can, or the total amount of sand. &lt;/p&gt;
-&lt;p&gt;Below the sliders is plot of the acceleration of the two cans. In blue you have the acceleration of the right can, and in red the left. Green is the sum of the two accelerations.The yellow line is your current setting for lambda. &lt;/p&gt;
+&lt;p&gt;Here is our setup. You have two cans submerged in water. The red arrow represents the buoyant force, the purple arrow is the force of gravity.&lt;/p&gt;
+&lt;p&gt;There are two sliders, one for &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; and the other for &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;. You can slide them to change the amount of sand that is in either can, or the total amount of sand.&lt;/p&gt;
+&lt;p&gt;Below the sliders is plot of the force of the two cans. In blue you have the force of the right can, and in red the left. Green is the sum of the two forces.The yellow line is your current setting for lambda.&lt;/p&gt;
 &lt;p&gt;Once you've dialed in your values press the play button and watch what happens.&lt;/p&gt;
 &lt;h4&gt;How To Use&lt;/h4&gt;
-&lt;p&gt;You can start by setting the values of &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; and &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; to something you think is interesting. Then use the plot and try to determine what will happen if lambda stays constant. Once you have a guess, press the play button and see what happens. &lt;/p&gt;
+&lt;p&gt;You can start by setting the values of &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; and &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; to something you think is interesting. Then use the plot and try to determine what will happen if lambda stays constant. Once you have a guess, press the play button and see what happens.&lt;/p&gt;
 &lt;p&gt;Try walking through different values of &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; based on what we discussed above. Then for each value of &lt;script type="math/tex"&gt;\kappa&lt;/script&gt;, vary &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; to see what changes. Press the refresh button to but the cans back at their starting positions.&lt;/p&gt;
 &lt;p&gt;Lastly, you can run the hourglass simulation by clicking on the running man. This will start with all the sand in the right (top) can, and transfer it to the left (bottom) can as time proceeds. This is meant to simulate what happens with the hourglass. Is there ever a situation in which the cans behave like the hourglass did?&lt;/p&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;From our two can setup we can draw some conclusions. Namely, that Newton was right and objects can be treated like point objects. It should appear obvious that this model does not accurately describe the hourglass and what is going on.&lt;/p&gt;
-&lt;p&gt;You should have found that only when &lt;script type="math/tex"&gt;\kappa&lt;1&lt;/script&gt; did the cans move in the same direction at the same time. For all other situations, the right can starts going down and at some point, will begin to go up while the left can will do the opposite.&lt;/p&gt;</content><category term="classical mechanics"></category></entry></feed>
+&lt;p&gt;From our two can setup we can draw some conclusions. Namely, that Newton was right and objects can be treated like point objects. We can see that we do meet the first half of \eqref{eq:kappacond} but we never meet the second half. This can be seen in the plot beneath the simulation. The sum of the the forces is always a constant value. It won't every start at zero and go to something else.&lt;/p&gt;
+&lt;p&gt;You should have found that only when &lt;script type="math/tex"&gt;\kappa&lt;1&lt;/script&gt; did the cans move in the same direction at the same time. For all other situations, the right can starts going down and at some point, will begin to go up while the left can will do the opposite. Meeting the first half of \eqref{eq:kappacond}. But we can never change the net force, as predicted by Newton.&lt;/p&gt;
+&lt;h2&gt;Instability Model&lt;/h2&gt;
+&lt;p&gt;Derek suggested an unstable equilibrium could add an additional frictional force that keeps the hourglass in place.&lt;/p&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;p&gt;&lt;img src="images/thefloatinghourglass/Tilted Hourglass.png"&gt; &lt;/p&gt;
+&lt;p&gt;Now we consider an hourglass floating in water, trapped between the cylindrical wall. Above we are looking at a cross section of the toy. We will model the system as a &lt;a href="https://en.wikipedia.org/wiki/Cone#Other_mathematical_meanings"&gt;double cone&lt;/a&gt; for simplicity. Sand is able to flow from the top half to the bottom half and we will keep the same filling factor of &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; and the mass scaling of &lt;script type="math/tex"&gt;\kappa&lt;/script&gt; from the Two Can model. Based on what we learned in the previous model we should also select a &lt;script type="math/tex"&gt;1 &lt; \kappa &lt; 2&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, to ease our calculations a little bit we will treat the sand filling up the bottom half of the hourglass like a liquid that is level to the base of the hourglass. That is, it will form a &lt;a href="https://en.wikipedia.org/wiki/Frustum"&gt;conical frustrum&lt;/a&gt; and not a conical pile inside the bottom half.&lt;/p&gt;
+&lt;h3&gt;Expectation&lt;/h3&gt;
+&lt;p&gt;We know from the Two Can model above that whenever &lt;script type="math/tex"&gt;\kappa &gt; 1&lt;/script&gt; the top half of the hourglass will want to sink and the bottom will float for some time, then when &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; reaches a particular value, they will switch.&lt;/p&gt;
+&lt;p&gt;This creates an unstable equilibrium that transforms into a stable one by the shifting of sand. When it becomes stable it does not want to rotate anymore and should rise.&lt;/p&gt;
+&lt;p&gt;Based on our observations of the GIF above, it looks like when the level of the sand on the top has decreased by about 25%. Thus we will calculate a &lt;script type="math/tex"&gt;\lambda&lt;/script&gt; value for when the equilibrium switches from unstable to stable, and see if the level of the sand in teh top half has decreased by 25%.&lt;/p&gt;
+&lt;h3&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Here we are only showing net forces. Notice on the picture above how the top has a net force acting downward and is to the right of the vertical (black dotted line). For the bottom we see the net force is upward and it is acting to the left of the vertical. If you imagine that the hourglass weren't bound by walls and you pushed on it it the way the forces are showing, it would spin clockwise.&lt;/p&gt;
+&lt;p&gt;Now when you add the walls they will exert the green forces on the hourglass. This normal force will also come with the yellow friction forces between the side of the wall and the hour glass. It is this yellow force that keeps the hourglass in place.&lt;/p&gt;
+&lt;p&gt;Thus if the hourglass is slightly off kilter, it will want to flip over.&lt;/p&gt;
+&lt;p&gt;Once a large amount of the sand has drained to the bottom hourglass we should see something like the following.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/thefloatinghourglass/Tilted Hourglass CCW.png"&gt; &lt;/p&gt;
+&lt;p&gt;The net force on the top half of the can is still to right of the vertical. Now though, enough sand has fallen it wants to float and so the net force is upwards. The exact opposite is true for the bottom half.&lt;/p&gt;
+&lt;p&gt;Now if you imagined pulling on the hourglass it would straighten out between the walls rather than try to flip. This will remove the frictional force and allow the&lt;/p&gt;</content><category term="classical mechanics"></category></entry></feed>
